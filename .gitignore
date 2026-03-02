@@ -1,0 +1,6 @@
+build/
+*.hex
+*.eep
+*.sym
+*.lst
+.DS_Store
