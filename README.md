@@ -2,6 +2,11 @@
 
 Teensy 4.0 firmware that decodes **analog LTC** from line-in and **USB-MIDI MTC**, and drives two MAX7219 7-segment displays (timecode + source/rate). Valid LTC can also be **re-emitted as USB-MIDI MTC** (full-frame + quarter-frame) for the host.
 
+<p align="center">
+  <img src="case/images/case-front.jpg" alt="Front of the 3D-printed case: two stacked MAX7219 displays showing timecode and source/rate" width="720"><br>
+  <img src="case/images/case-back.jpg" alt="Back of the case: XLR, USB and headphone jack" width="720">
+</p>
+
 ## Features
 
 ### Inputs and routing
@@ -68,6 +73,18 @@ Exact power depends on your MAX7219 module; many run on 5V.
 - Power on: splash, then `00:00:00:00` and a default bottom line until LTC or MTC is received.
 - Send **LTC** to line-in and/or **MTC** over USB-MIDI; the active source drives the timecode and the bottom display shows **ANA** or **USB** plus rate.
 - With **LTC** present, the host can receive **MTC** reflecting that timecode (DAW or MIDI monitor).
+
+## 3D-printed case
+
+A compact case for the Teensy 4.0 + Audio Shield and both displays, with every connector on the back panel (XLR, USB and the headphone jack).
+
+- **Files**: [`case/case_body.stl`](case/case_body.stl) and [`case/case_lid.stl`](case/case_lid.stl) (STL, ready to slice).
+- **Size**: 94.8 × 58.4 × 36.1 mm, plus a 3 mm lid.
+- **Print**: body open side up on its bottom face, lid with the rounded face up; no supports. The clearances are tuned for carbon-fibre PETG; with plain PETG the fits will be slightly looser.
+- **Displays**: the two MAX7219 modules are stacked at the front; each PCB end drops down into a slot and the lid keeps them in place. Each module is 82.3 × 15 mm, 1.4 mm thick, 8.9 mm including the digit blocks.
+- **Electronics**: the Teensy and Audio Shield (Rev D) sit on 10 mm standoffs, leaving room underneath for cabling.
+- **XLR**: a D-size panel connector (Neutrik / Rean RC3FDL footprint) held with 2 × M3 screws and nuts; the nuts sit in hex pockets inside the back wall.
+- **Lid**: held with 4 × M3×10 flat-head screws into M3 brass heat-set inserts (6 mm long, 5 mm outer diameter) pressed into the four corner posts. A 25 × 25 mm recess on top fits a sticker.
 
 ## License
 
