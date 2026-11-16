@@ -79,6 +79,7 @@ Exact power depends on your MAX7219 module; many run on 5V.
 A compact case for the Teensy 4.0 + Audio Shield and both displays, with every connector on the back panel (XLR, USB and the headphone jack).
 
 - **Files**: [`case/case_body.stl`](case/case_body.stl) and [`case/case_lid.stl`](case/case_lid.stl) (STL, ready to slice).
+- **CAD**: STEP files in [`case/step/`](case/step) and the editable FreeCAD model in [`case/freecad/`](case/freecad). `midi_box.FCStd` opens in FreeCAD, and `midi_box.py` regenerates the box, lid, STEP and STL files from a list of dimensions at the top of the script (run it in FreeCAD's Python console with `OUT_DIR` set, or headless with `freecadcmd`).
 - **Size**: 94.8 × 58.4 × 36.1 mm, plus a 3 mm lid.
 - **Print**: body open side up on its bottom face, lid with the rounded face up; no supports. The clearances are tuned for carbon-fibre PETG; with plain PETG the fits will be slightly looser.
 - **Displays**: the two MAX7219 modules are stacked at the front; each PCB end drops down into a slot and the lid keeps them in place. Each module is 82.3 × 15 mm, 1.4 mm thick, 8.9 mm including the digit blocks.
